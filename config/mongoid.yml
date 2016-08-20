@@ -134,10 +134,8 @@ test:
         max_pool_size: 1
 
 production:
+  uri: <%= ENV['MONGOHQ_URL'] %>
   clients:
     default:
-      database: engine_production
-      hosts:
-        - localhost:27017
       options:
         max_pool_size: 1
