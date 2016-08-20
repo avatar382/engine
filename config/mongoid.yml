@@ -136,13 +136,13 @@ test:
 production:
   clients:
     default:
-      database: <% ENV['MONGO_DB'] %>
+      database: <%= ENV['MONGO_DB'] %>
       hosts:
-        - <% ENV['MONGO_URL'] %>
+        - <%= ENV['MONGO_URL'] %>
       options:
         max_pool_size: 1
-        user: <% ENV['MONGO_USERNAME'] %>
-        password: <% ENV['MONGO_PASSWORD'] %>
+        user: <%= ENV['MONGO_USERNAME'] %>
+        password: <%= ENV['MONGO_PASSWORD'] %>
         max_retries_on_connection_failure: 20
         persist_in_safe_mode: true
         skip_version_check: true
