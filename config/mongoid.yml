@@ -136,13 +136,13 @@ test:
 production:
   clients:
     default:
-      database: heroku_917dc400
+      database: <% ENV['MONGO_DB'] %>
       hosts:
-        - ds013206.mlab.com:13206
+        - <% ENV['MONGO_URL'] %>
       options:
         max_pool_size: 1
-        user: heroku_917dc400
-        password: gdhvgmg79h3cuu807mnhagas9v
+        user: <% ENV['MONGO_USERNAME'] %>
+        password: <% ENV['MONGO_PASSWORD'] %>
         max_retries_on_connection_failure: 20
         persist_in_safe_mode: true
         skip_version_check: true
