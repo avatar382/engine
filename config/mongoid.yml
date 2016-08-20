@@ -135,16 +135,7 @@ test:
 
 production:
   uri: <%= ENV['MONGOHQ_URL'] %>
-  clients:
-    default:
-      options:
-        max_pool_size: 1
-
-default:
-  uri: <%= ENV['MONGOHQ_URL'] %>
-  clients:
-    default:
-      options:
-        max_pool_size: 1
-
+  max_retries_on_connection_failure: 20
+  persist_in_safe_mode: true
+  skip_version_check: true
 
