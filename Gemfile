@@ -45,4 +45,5 @@ group :development do
   gem 'spring'
 end
 gem 'locomotivecms', '~> 3.1.1'
+gem 'carrierwave-aws'
 
